@@ -10,6 +10,6 @@ jobs:
         - uses: actions/checkout@master
         - name: launch training job      
           run: |
-            #sudo apt install python-pip
-            #pip install requests
+            sudo apt install python-pip
+            pip install requests
             python ss.py "${{secrets.JWT_TOKEN}}"
