@@ -7,9 +7,6 @@ jobs:
   create_commit:
     runs-on: ubuntu-latest
     steps:
-    - name: Create issue using REST API
-      env:
-        JWT_TOKEN: ${{'eyJTZXNzaW9uIjp0cnVlLCJUb2tlbiI6ImV5SmhiR2NpT2lKSVV6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUpqY21WaGRHVmtJam94TlRjek1EVXdNVFV6TENKeWIyeGxJam9pYjNCbGNtRjBiM0lpTENKMWMyVnlibUZ0WlNJNkltOWpaR3QxWW1VaWZRLlBGRFJTcC1UbXJNeUJRMXRLWm1EX0FmaHFCMVVOZkYtQW9wbjBVTjVFUXcifQ=='}}
+    - name: Create issue using REST API      
       run: |
-        echo "print ('satish')" >> rr.py
-        python rr.py
+        python ss.py
