@@ -1,4 +1,4 @@
-name: Create issue on commit
+name: launch training job
 on:
   push:
     branches:
@@ -8,13 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - uses: actions/checkout@master
-          with:
-            python-version: '3.x'
-        - name: Create issue using REST API      
+        - name: launch training job      
           run: |
-            sudo apt install python3-pip
             sudo apt install python-pip
-            pip3 install requests
             pip install requests
-            pip list
             python ss.py
