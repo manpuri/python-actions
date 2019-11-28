@@ -13,5 +13,8 @@ jobs:
         - name: Create issue using REST API      
           run: |
             sudo apt install python3-pip
+            sudo apt install python-pip
             pip3 install requests
+            pip install requests
+            pip list
             python ss.py
