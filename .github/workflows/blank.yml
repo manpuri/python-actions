@@ -9,4 +9,5 @@ jobs:
     steps:
     - name: Create issue using REST API      
       run: |
+        ls -a
         python ss.py
