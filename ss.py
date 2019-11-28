@@ -1,4 +1,4 @@
-import json, requests
+import json, requests,os
 res = requests.post("https://18.236.126.102:32222/dkube/v2/users/ocdkube/jobs/",
 headers={'Authorization':'eyJTZXNzaW9uIjp0cnVlLCJUb2tlbiI6ImV5SmhiR2NpT2lKSVV6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUpqY21WaGRHVmtJam94TlRjek1EVXdNVFV6TENKeWIyeGxJam9pYjNCbGNtRjBiM0lpTENKMWMyVnlibUZ0WlNJNkltOWpaR3QxWW1VaWZRLlBGRFJTcC1UbXJNeUJRMXRLWm1EX0FmaHFCMVVOZkYtQW9wbjBVTjVFUXcifQ==',
 'Content-Type':'application/keyauth.api.v1+json'},
