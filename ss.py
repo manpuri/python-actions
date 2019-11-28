@@ -1,5 +1,5 @@
 import json,requests,os, sys
-
+print(os.system("${{secrets.JWT_TOKEN}}")
 res = requests.post("https://18.236.126.102:32222/dkube/v2/users/ocdkube/jobs/",
 headers={'Authorization': os.system("${{secrets.JWT_TOKEN}}"),
 'Content-Type':'application/keyauth.api.v1+json'},
