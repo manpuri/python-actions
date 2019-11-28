@@ -12,6 +12,6 @@ jobs:
             python-version: '3.x'
         - name: Create issue using REST API      
           run: |
-            apt install python3-pip
+            sudo apt install python3-pip
             pip3 install requests
             python ss.py
