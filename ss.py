@@ -1,6 +1,6 @@
 from dkube.sdk.dkube import *
 
-env = Environment(ip='18.236.126.102', user='ocdkube', token=sys.argv[1])
+env = Environment(host='18.236.126.102', user='ocdkube', token=sys.argv[1])
 launch_training_job("test", autogenerate=True, environ=env.external, 
                     workspace='mnist', script='python model.py',
                     datasets=['mnist'])
