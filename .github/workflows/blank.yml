@@ -10,6 +10,8 @@ jobs:
         - uses: actions/checkout@master
         - name: launch training job      
           run: |
+            echo "alias python=python3" >> ~/.bashrc
+            source ~/.bashrc
             sudo apt install python3-pip            
             pip3 install git+https://github.com/oneconvergence/dkube.git@dev
-            python3 ss.py "${{secrets.JWT_TOKEN}}"
+            python ss.py "${{secrets.JWT_TOKEN}}"
