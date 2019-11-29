@@ -1,4 +1,4 @@
-import json,requests,os, sys
+
 from dkube.sdk.dkube import *
 
 #res = requests.post("https://18.236.126.102:32222/dkube/v2/users/ocdkube/jobs/",
@@ -8,7 +8,7 @@ from dkube.sdk.dkube import *
 
 #print (res)
 
-env = Environment(host='18.236.126.102:32222', user='ocdkube', token=sys.argv[1])
+env = Environment(scheme='https', host='18.236.126.102', user='ocdkube', token=sys.argv[1], port=32222)
 launch_training_job("test", autogenerate=True, environ=env.external, 
                     workspace='mnist', script='python model.py',
                     datasets=['mnist'])
