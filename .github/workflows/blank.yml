@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - uses: actions/checkout@master
-        - name: launch training JOB      
+        - name: launch training JOb    
           run: |
             sudo apt install python3-pip 
             pip3 install setuptools
