@@ -10,6 +10,7 @@ jobs:
         - uses: actions/checkout@master
         - name: launch training job      
           run: |
-            python3 -m pip3 install https://storage.googleapis.com/ml-pipeline/release/0.1.23/kfp.tar.gz
-            python3 -m pip3 install git+https://github.com/oneconvergence/dkube.git@dev
+            sudo apt install python3-pip
+            pip3 install https://storage.googleapis.com/ml-pipeline/release/0.1.23/kfp.tar.gz
+            pip3 install git+https://github.com/oneconvergence/dkube.git@dev
             python3 ss.py "${{secrets.JWT_TOKEN}}"
