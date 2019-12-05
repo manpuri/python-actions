@@ -14,10 +14,5 @@ jobs:
             pip3 install setuptools
             pip3 install wheel           
             sudo pip3 install git+https://github.com/oneconvergence/dkube.git@dev
-            python3 -c "from dkube.sdk.dkube import *;
-            env = Environment(scheme='https', host='18.236.126.102', user='ocdkube',
-            token=sys.argv[1], port=32222); 
-            launch_training_job('test', autogenerate=True, environ=env.external, 
-            workspace='mnist', script='python model.py',datasets=['mnist'])" 
-            "${{secrets.JWT_TOKEN}}"
+            python3 -c "from dkube.sdk.dkube import *;env = Environment(scheme='https', host='18.236.126.102', user='ocdkube',token=sys.argv[1], port=32222); launch_training_job('test', autogenerate=True, environ=env.external, workspace='mnist', script='python model.py',datasets=['mnist'])" "${{secrets.JWT_TOKEN}}"
 
